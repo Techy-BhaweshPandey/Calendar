@@ -41,7 +41,7 @@ npm install
 Start the development server:
 npm start
 
-Open [[http://localhost:3000](https://viewcalendarapp.netlify.app/)](http://localhost:3000) to view it in your browser.
+Open [(https://viewcalendarapp.netlify.app/)] to view it in your browser.
 
 ---
 
