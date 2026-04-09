@@ -1,0 +1,269 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease; /* Smooth color change */
+}
+
+.app {
+  min-height: 100vh; 
+  padding: 20px;
+  color: #222; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+}
+
+.header button {
+  background: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  flex-grow: 1; 
+}
+.image-panel {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+}
+
+.day {
+  background: #ffffffcc;
+  backdrop-filter: blur(5px);
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.day:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.today {
+  border: 2px solid #ff6f61;
+  background: #ffe3e0;
+  font-weight: bold;
+  position: relative;
+}
+
+.holiday-day {
+  border: 2px dashed #e74c3c;
+  position: relative;
+}
+
+.holiday-label {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  background: #e74c3c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.note-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  color: #222;
+  cursor: pointer;
+}
+.in-range {
+  background: #a0e7e5;
+}
+
+.start, .end {
+  background: #ffae00;
+  color: white;
+}
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 12px 20px;
+  border: none;
+  background: #1E3A8A;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.actions button:hover {
+  transform: scale(1.05);
+  background: #152a5a;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #f7f7f7;
+  color: #222;
+  padding: 25px 20px;
+  border-radius: 16px;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s;
+}
+
+.modal-content h3 {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.date-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.date-range label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.date-range input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-top: 4px;
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.modal-actions button.save {
+  background: #1E3A8A;
+  color: white;
+}
+
+.modal-actions button.save:hover {
+  transform: scale(1.05);
+  background: #152a5a;
+}
+
+.modal-actions button.cancel {
+  background: #ccc;
+  color: #333;
+}
+
+.modal-actions button.cancel:hover {
+  background: #aaa;
+}
+.download-btn {
+  background: #1E3A8A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.download-btn:hover {
+  background: #152a5a;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .image-panel {
+    height: 200px;
+  }
+}

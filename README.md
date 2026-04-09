@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Wall Calendar React Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully interactive, visually appealing **wall calendar** built with **React**, inspired by a physical wall calendar aesthetic. This project allows users to view monthly calendars, select date ranges, add notes, mark holidays, and download notes as a PDF.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Wall Calendar Layout**: Emulates a real wall calendar with a hero image for each month.
+- **Day Range Selector**: Click to select a start and end date with clear visual highlights.
+- **Integrated Notes Section**: Add notes to specific dates or across a date range. Notes persist using `localStorage`.
+- **Holiday Markers**: Predefined holidays are highlighted in the calendar.
+- **Responsive Design**: Works seamlessly on desktop and mobile devices.
+- **Animations**: Smooth "flip" animation when switching months.
+- **PDF Export**: Download all notes for the current month as a PDF.
 
-Runs the app in the development mode.\
+---
+
+## Demo
+
+> Add a screenshot or GIF of the calendar here (optional but recommended).
+
+---
+
+## Installation
+
+1. Clone the repository:
+git clone https://github.com/Techy-BhaweshPandey/wall-calendar.git
+
+
+2. Navigate to the project folder:
+cd wall-calendar
+
+
+3. Install dependencies:
+npm install
+
+
+Start the development server:
+npm start
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Navigate months using the left/right arrows.
+- Click on a day to start a range selection; click another day to set the end date.
+- Click the **+ Add Note** button or any note icon to add/edit notes.
+- Download notes for the months using the **Download Notes** button.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React** (Functional Components, Hooks)
+- **Framer Motion** (Animations for month transitions)
+- **React Icons** (Icons for navigation and notes)
+- **jsPDF** (Export notes as PDF)
+- **CSS** (Responsive styling)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Project Structure
+wall-calendar/
+├─ src/
+│ ├─ components/
+│ │ └─ WallCalendar.js # Main calendar component
+│ ├─ styles/
+│ │ └─ calendar.css # Calendar styling
+│ ├─ App.js
+│ └─ index.js
+├─ public/
+├─ package.json
+└─ README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Repository Link
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[https://github.com/Techy-BhaweshPandey/Calendar](https://github.com/Techy-BhaweshPandey/Calendar)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes / To Do
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add ability to delete individual notes.
+- Integrate dynamic holiday API for multiple countries.
+- Improve mobile layout with swipe gestures.
+- Add theme switching based on month images/colors.
