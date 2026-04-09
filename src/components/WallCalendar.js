@@ -82,7 +82,6 @@ function WallCalendar() {
   return cal;
 }, []);
 
-  // Memoized calendar for performance
   const calendar = useMemo(() => generateCalendar(currentMonth, currentYear), [currentMonth, currentYear, generateCalendar]);
 
   const saveNotes = () => {
