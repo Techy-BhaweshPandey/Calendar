@@ -18,7 +18,7 @@ A fully interactive, visually appealing **wall calendar** built with **React**, 
 
 ## Demo
 
-> Add a screenshot or GIF of the calendar here (optional but recommended).
+<img width="1763" height="904" alt="image" src="https://github.com/user-attachments/assets/f9f72ca5-bb0b-4cbe-8ca3-be7a914a05a2" />
 
 ---
 
